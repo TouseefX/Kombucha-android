@@ -63,6 +63,7 @@ AddReg=\
     Debugger,\
     DirectX,\
     Fonts,\
+    KombuchaOverrides,\
     LicenseInformation,\
     MCI,\
     Misc,\
@@ -1339,3 +1340,15 @@ InfFiles  = 17
 NlsFiles  = 11
 SortFiles = 10,globalization\sorting
 WinmdFiles = 11,winmetadata
+
+[KombuchaOverrides]
+;; Global overrides
+HKCU,Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers,"",,"~ HIGHDPIAWARE"
+;; WebView2-specific overrides
+HKCU,Software\Wine\AppDefaults\msedgewebview2.exe,"Version",,"win8"
+HKCU,Software\Wine\AppDefaults\msedgewebview2.exe\DllOverrides,"d3d8",,"builtin"
+HKCU,Software\Wine\AppDefaults\msedgewebview2.exe\DllOverrides,"d3d9",,"builtin"
+HKCU,Software\Wine\AppDefaults\msedgewebview2.exe\DllOverrides,"d3d10core",,"builtin"
+HKCU,Software\Wine\AppDefaults\msedgewebview2.exe\DllOverrides,"d3d11",,"builtin"
+HKCU,Software\Wine\AppDefaults\msedgewebview2.exe\DllOverrides,"dxgi",,"builtin"
+HKCU,Software\Wine\Fonts\Replacements,"Arial",,"Liberation Sans"
